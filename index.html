@@ -5,7 +5,7 @@
 		font-family: "Microsoft Yahei", sans-serif;
 	}
 	.content {
-		width: 800px;
+		width: 400px;
 		margin: 0 auto;
 		background: #ccc;
 		position: relative;
@@ -45,25 +45,18 @@
 	<div id="k-catelog">
 		<h1>服务</h1>
 		<h2 style="height: 300px;">配件商城</h2>
-		<h1 style="height: 500px;">我的</h1>
-		<h2 style="height: 500px;">个人中心</h2>  
-		<h3 style="height: 400px;">第1季</h3>
-		<h3 style="height: 500px;">第2季</h3>
-		<h2 style="height: 1000px;">一键直播</h2>
-		<h1>服务</h1>
+		<h1>服务2</h1>
 		<h2 style="height: 300px;">配件商城</h2>
-		<h1 style="height: 500px;">我的</h1>
-		<h2 style="height: 500px;">个人中心</h2>  
-		<h3 style="height: 400px;">第1季</h3>
-		<h3 style="height: 500px;">第2季</h3>
-		<h2 style="height: 1000px;">一键直播</h2>
-		<h1>服务</h1>
+		<h3 style="height: 300px;">配件商城</h3>
+		<h4 style="height: 300px;">配件商城</h4>
+		<h1>服务2</h1>
 		<h2 style="height: 300px;">配件商城</h2>
-		<h1 style="height: 500px;">我的</h1>
-		<h2 style="height: 500px;">个人中心</h2>  
-		<h3 style="height: 400px;">第1季</h3>
-		<h3 style="height: 500px;">第2季</h3>
-		<h2 style="height: 1000px;">一键直播</h2>
+		<h2 style="height: 300px;">配件商城</h2>
+		<h3 style="height: 300px;">配件商城</h3>
+		<h4 style="height: 300px;">配件商城</h4>
+		<h1>服务2</h1>
+		<h4 style="height: 300px;">配件商11城</h4>
+		<h1>服务2</h1>
 	</div>
 	<div class="k-catelog-list" id="catelog-list"></div>
 </div>
@@ -71,14 +64,9 @@
 </body>
 <script type="text/javascript" src="./k-catelog.js"></script>
 <script type="text/javascript">
-var kcate = new KCate({
-	el: 'k-catelog',
-	target: 'catelog-list',
-	level: {
-		one: 'h1',
-		two: 'h2',
-		three: 'h3'
-	},
+var kcate = new Katelog({
+	contentEl: 'k-catelog',
+	catelogEl: 'catelog-list',
 	linkClass: 'k-catelog-link',
 	linkActiveClass: 'k-catelog-link-active',
 	supplyTop: 20,
