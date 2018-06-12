@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
+<style type="text/css">
+	* {
+		font-family: "Microsoft Yahei", sans-serif;
+	}
+	.content {
+		width: 800px;
+		margin: 0 auto;
+		background: #ccc;
+		position: relative;
+	}
+	.k-catelog-list {
+		width: 300px;
+		height: 300px;
+		position: fixed;
+		left: 0px;
+		top: 0;
+		overflow: auto;
+	}
+	.k-catelog-list li {
+		list-style: none;
+	}
+	.k-catelog-link {
+		display: block;
+		padding: 8px 12px;
+		text-decoration: none;
+		transition: background 0.5s;
+		-moz-transition: background 0.5s; /* Firefox 4 */
+		-webkit-transition: background 0.5s; /* Safari and Chrome */
+		-o-transition: background 0.5s; /* Opera */
+	}
+	.k-catelog-link-active {
+		font-weight: bolder;
+		font-size: 16px;
+		background: #333;
+		color: white;
+	}
+</style>
 <head>
 	<title></title>
-	<style type="text/css">
-		* {
-			font-family: "Microsoft Yahei", sans-serif;
-		}
-		.content {
-			width: 800px;
-			margin: 0 auto;
-			background: #ccc;
-			position: relative;
-		}
-		.k-catelog-list {
-			width: 300px;
-			position: fixed;
-			left: 0px;
-			top: 0;
-			height: 100%;
-			overflow: auto;
-		}
-		.k-catelog-list li {
-			list-style: none;
-		}
-		.k-catelog-link {
-			display: block;
-			padding: 8px 12px;
-			text-decoration: none;
-			transition: background 0.5s;
-			-moz-transition: background 0.5s; /* Firefox 4 */
-			-webkit-transition: background 0.5s; /* Safari and Chrome */
-			-o-transition: background 0.5s; /* Opera */
-		}
-		.k-catelog-link-active {
-			font-weight: bolder;
-			font-size: 16px;
-			background: #333;
-			color: white;
-		}
-	</style>
 </head>
 <body>
 <div class="content">
@@ -69,7 +69,7 @@
 </div>
 
 </body>
-<script type="text/javascript" src="./k-catelog.min.js"></script>
+<script type="text/javascript" src="./k-catelog.js"></script>
 <script type="text/javascript">
 var kcate = new KCate({
 	el: 'k-catelog',
@@ -80,7 +80,8 @@ var kcate = new KCate({
 		three: 'h3'
 	},
 	linkClass: 'k-catelog-link',
-	linkActiveClass: 'k-catelog-link-active'
-}); 
+	linkActiveClass: 'k-catelog-link-active',
+	supplyTop: 20,
+});
 </script>
 </html>
