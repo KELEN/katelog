@@ -14,6 +14,7 @@
         linkClass: 'k-catelog-link',
         linkActiveClass: 'k-catelog-link-active',
         supplyTop: 0,
+        active: null    // 激活时候回调
     };
 
     const option = Object.assign({}, defaultOpts, opts);
@@ -118,23 +119,6 @@
         }
     };
 
-    /**
-     * 移除事件
-     * @param obj
-     * @param type
-     * @param fn
-     */
-    function removeEvent(obj, type, fn) {
-        if (obj) {
-            if (obj.detachEvent) {
-                obj.detachEvent('on' + type, obj[type + fn]);
-                obj[type + fn] = null;
-            } else {
-                obj.removeEventListener(type, fn, false);
-            }
-        }
-    };
-
 
     /**
      * 生成树
@@ -219,6 +203,11 @@
                 } else {
                     $catelog.children[0].style.marginTop = '0px';
                 }
+
+                if (typeof option.active === 'function') {
+                    option.active.call(this, c);
+                }
+
             } else {
                 c.classList.remove(option.linkActiveClass);
             }
