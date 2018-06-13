@@ -10,13 +10,18 @@
 		background: #ccc;
 		position: relative;
 	}
+	#k-catelog {
+		position: relative;
+		overflow: hidden;
+	}
 	.k-catelog-list {
 		width: 300px;
 		height: 300px;
 		position: fixed;
 		left: 0px;
 		top: 0;
-		overflow: auto;
+		overflow: hidden;
+		border: 1px solid #333;
 	}
 	.k-catelog-list li {
 		list-style: none;
@@ -31,8 +36,6 @@
 		-o-transition: background 0.5s; /* Opera */
 	}
 	.k-catelog-link-active {
-		font-weight: bolder;
-		font-size: 16px;
 		background: #333;
 		color: white;
 	}
@@ -41,35 +44,39 @@
 	<title></title>
 </head>
 <body>
+<div class="k-catelog-list" id="catelog-list"></div>
 <div class="content">
 	<div id="k-catelog">
-		<h1>服务</h1>
-		<h2 style="height: 300px;">配件商城</h2>
+		<h1>服务1</h1>
+		<h2 style="height: 800px;">配件商城1</h2>
 		<h1>服务2</h1>
-		<h2 style="height: 300px;">配件商城</h2>
-		<h3 style="height: 300px;">配件商城</h3>
-		<h4 style="height: 300px;">配件商城</h4>
+		<h2 style="height: 300px;">配件商城2</h2>
+		<h3 style="height: 300px;">配件商城3</h3>
+		<h4 style="height: 300px;">配件商城4</h4>
 		<h1>服务2</h1>
-		<h2 style="height: 300px;">配件商城</h2>
-		<h2 style="height: 300px;">配件商城</h2>
-		<h3 style="height: 300px;">配件商城</h3>
-		<h4 style="height: 300px;">配件商城</h4>
+		<h2 style="height: 300px;">配件商城2</h2>
+		<h3 style="height: 300px;">配件商城3</h3>
+		<h4 style="height: 300px;">配件商城4</h4><h1>服务2</h1>
+		<h2 style="height: 300px;">配件商城2</h2>
+		<h3 style="height: 300px;">配件商城3</h3>
+		<h4 style="height: 300px;">配件商城4</h4>
 		<h1>服务2</h1>
-		<h4 style="height: 300px;">配件商11城</h4>
-		<h1>服务2</h1>
+		<h2 style="height: 300px;">配件商城2</h2>
+		<h3 style="height: 300px;">配件商城3</h3>
+		<h4 style="height: 300px;">配件商城4</h4>
+
 	</div>
-	<div class="k-catelog-list" id="catelog-list"></div>
 </div>
 
 </body>
-<script type="text/javascript" src="./k-catelog.js"></script>
+<script type="text/javascript" src="../dist/k-catelog.js"></script>
 <script type="text/javascript">
 var kcate = new Katelog({
 	contentEl: 'k-catelog',
 	catelogEl: 'catelog-list',
 	linkClass: 'k-catelog-link',
 	linkActiveClass: 'k-catelog-link-active',
-	supplyTop: 20,
+	supplyTop: 20
 });
 </script>
 </html>
