@@ -1,5 +1,6 @@
 ##文章目录自动生成插件
 
+自动生成文章目录结构，灵活配置
 
 #### 使用方法
 
@@ -18,19 +19,50 @@
     <div class="k-catelog-list" id="catelog-list"></div>
 ```
 
-* 配置
-
 ``` javascript
-new KCate({
-    el: 'k-catelog',        // 文章标题的容器
-	target: 'catelog-list',  // 目录容器
-	level: {			
-		one: 'h1',			// 一级目录对应的标签
-		two: 'h2',			// 二级目录对应的标签
-		three: 'h3'			// 三级目录对应的标签
-	},	
-	linkClass: 'k-catelog-link',		// 可选，对应的链接样式
-	linkActiveClass: 'k-catelog-link-active'	// 可选，当前链接样式
-}); 
+new Katelog({
+	contentEl: 'k-catelog',
+	catelogEl: 'catelog-list',
+	linkClass: 'k-catelog-link',
+	linkActiveClass: 'k-catelog-link-active',
+	supplyTop: 20,	
+	active: function (el) {
+		console.log(el);
+    }
+});
 ```
+
+支持IE8以上和主流的浏览器
+
+## 选项
+
+##### contentEl
+
+文章容器，id选择器
+
+#### catelogEl
+
+目录容器，id选择器
+
+#### linkClass
+
+每个目录项的类
+
+#### linkActiveClass
+
+当前激活的目录项的类
+
+#### selector（可选）
+
+选择目录的标题元素，默认支持6级树形结构
+
+默认值: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
+
+```javascript
+selector: ['h2', 'h3']
+```
+
+#### supplyTop（可选）
+
+每个目录需要补充的高度，比如fixed头部布局会挡住实现，可以设置supplyTop来修正
 
