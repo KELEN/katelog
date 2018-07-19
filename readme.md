@@ -1,6 +1,8 @@
 # 文章目录自动生成器
 
-> 无第三方依赖的，自动生成文章目录结构，灵活配置
+> 类似于segmentfault和掘金的文章目录，无第三方依赖的，自动生成文章目录结构，灵活配置
+
+[demo地址](https://kelen.github.io/k-catelog/dist/index.html)
 
 ``` html
 <!-- 文章容器 -->
