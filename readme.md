@@ -1,38 +1,29 @@
-##文章目录自动生成插件
+# 文章目录自动生成器
 
-自动生成文章目录结构，灵活配置
-
-#### 使用方法
-
-* 引入js
+> 无第三方依赖的，自动生成文章目录结构，灵活配置
 
 ``` html
-    <div id="k-catelog">
-		<h1>服务</h1>
-		<h2 style="height: 300px;">配件商城</h2>
-		<h1 style="height: 500px;">我的</h1>
-		<h2 style="height: 500px;">个人中心</h2>  
-		<h3 style="height: 400px;">第1季</h3>
-		<h3 style="height: 500px;">第2季</h3>
-		<h2 style="height: 1000px;">一键直播</h2>
-    </div>
-    <div class="k-catelog-list" id="catelog-list"></div>
+<!-- 文章容器 -->
+<div id="kCatelog"></div>
+<!-- 目录容器 -->
+<div class="k-catelog-list" id="catelogList"></div>
 ```
 
 ``` javascript
 new Katelog({
-	contentEl: 'k-catelog',
-	catelogEl: 'catelog-list',
-	linkClass: 'k-catelog-link',
-	linkActiveClass: 'k-catelog-link-active',
-	supplyTop: 20,	
-	active: function (el) {
-		console.log(el);
+    contentEl: 'kCatelog',
+    catelogEl: 'catelogList',
+    linkClass: 'k-catelog-link',
+    linkActiveClass: 'k-catelog-link-active',
+    supplyTop: 20,
+    selector: ['h2', 'h3'],
+    active: function (el) {
+        console.log(el);
     }
 });
 ```
 
-支持IE8以上和主流的浏览器
+**支持IE8以上和主流的浏览器**
 
 ## 选项
 
