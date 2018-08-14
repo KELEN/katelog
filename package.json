@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "a tool to generate html catelog by head (h1, h2, h3, h4, h5, h6);",
   "main": "k-catelog.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KELEN/k-catelog.git"

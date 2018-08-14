@@ -330,7 +330,7 @@
             let scrollTop = getScrollTop() + option.supplyTop;
             let scrollToEl = null;
             for (let i = allCatelogs.length - 1; i >= 0; i--) {
-                if (allCatelogs[i].offsetTop <= scrollTop) {
+                if (getElementTop(allCatelogs[i]) <= scrollTop) {
                     scrollToEl = allCatelogs[i];
                     break;
                 }
@@ -339,6 +339,15 @@
             else setActiveItem(null);   // 无匹配的元素
         }
         clickToScroll = false;
+    }
+
+
+    function getElementTop (el) {
+        let top = el.offsetTop;
+        while (el = el.offsetParent) {
+            top += el.offsetTop;
+        }
+        return top;
     }
 
     addEvent(window, 'scroll', resolveScroll);
