@@ -125,8 +125,8 @@
         return tree;
     }
 
-    
-    
+
+
     /**
      * 找到当前节点的父级
      * @param currTreeItem
@@ -358,7 +358,7 @@
     // fix https://github.com/KELEN/k-catelog/issues/1
     // 重新构建目录
     this.rebuild = function() {
-        let allCatelogs = $content.querySelectorAll(option.selector.join());
+        allCatelogs = $content.querySelectorAll(option.selector.join());
         let tree = getCatelogsTree(allCatelogs);
         $catelog.innerHTML = generateHtmlTree(tree, {id: -1});
     }

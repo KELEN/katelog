@@ -1,6 +1,7 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+.idea/workspace.xml
 
 # Folder config file
 Desktop.ini
@@ -48,5 +49,3 @@ Temporary Items
 
 node_modules
 .idea/*
-.idea/workspace.xml
-.idea/workspace.xml

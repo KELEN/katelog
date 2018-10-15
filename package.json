@@ -1,12 +1,11 @@
 {
-  "name": "k-catelog",
-  "version": "1.0.0",
-  "description": "a tool to generate html catelog by head (h1, h2, h3, h4, h5, h6);",
-  "main": "k-catelog.js",
-  "scripts": {},
+  "name": "katelog",
+  "version": "0.0.2",
+  "description": "a pure javascript tool to generate html catelog by head (h1, h2, h3, h4, h5, h6);",
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KELEN/k-catelog.git"
+    "url": "git+https://github.com/KELEN/katelog.git"
   },
   "keywords": [
     "catelog"
@@ -14,15 +13,16 @@
   "author": "kelen",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KELEN/k-catelog/issues"
+    "url": "https://github.com/KELEN/katelog/issues"
   },
-  "homepage": "https://github.com/KELEN/k-catelog#readme",
+  "homepage": "https://github.com/KELEN/katelog#readme",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
+    "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.0",
     "pump": "^3.0.0"
   }

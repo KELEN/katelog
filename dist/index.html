@@ -303,22 +303,22 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="./k-catelog.js"></script>
+<script type="text/javascript" src="./katelog.min.js"></script>
 <script type="text/javascript">
-    let katelogIns = new Katelog({
-        contentEl: 'k-catelog',
-        catelogEl: 'catelog-list',
-        linkClass: 'k-catelog-link',
-        linkActiveClass: 'k-catelog-link-active',
-        selector: ['h2', 'h3'],
-        supplyTop: 20,
-        active: function (el) {
-        }
-    });
+let katelogIns = new Katelog({
+    contentEl: 'k-catelog',
+    catelogEl: 'catelog-list',
+    linkClass: 'k-catelog-link',
+    linkActiveClass: 'k-catelog-link-active',
+    selector: ['h2', 'h3'],
+    supplyTop: 20,
+    active: function (el) {
+    }
+});
 
-    let html = '<h2>动态添加的标题</h2>'
-    katelogIns.contentEl.insertAdjacentHTML('afterBegin', html);
-    katelogIns.rebuild();
+let html = '<h2>动态添加的标题</h2>'
+katelogIns.contentEl.insertAdjacentHTML('afterBegin', html);
+katelogIns.rebuild();
 
 
 </script>
