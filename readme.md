@@ -28,7 +28,7 @@ console.log(katelog);
 ```
 
 ``` javascript
-new Katelog({
+new katelog({
     contentEl: 'kCatelog',
     catelogEl: 'catelogList',
     linkClass: 'k-catelog-link',
@@ -82,6 +82,6 @@ selector: ['h2', 'h3']
 动态新增或者删除的内容，重新构建目录
 
 ```javascript
-let Katelog = new Katelog({ ... });
-Katelog.rebuild();
+let katelog = new katelog({ ... });
+katelog.rebuild();
 ```

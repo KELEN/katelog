@@ -6,7 +6,7 @@
     } else if (typeof exports === 'object') {
         module.exports = factory;
     } else {
-        root.Katelog = factory;
+        root.katelog = factory;
     }
 })(window, function(opts) {
 
