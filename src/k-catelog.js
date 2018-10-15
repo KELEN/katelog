@@ -90,10 +90,6 @@
         return Array.prototype.slice.call(al);
     }
 
-    const option = Object.assign({}, defaultOpts, opts);
-    const $content = document.getElementById(option.contentEl);      // 内容元素
-    const $catelog = document.getElementById(option.catelogEl);     // 目录元素
-
     /**
      * 获取目录树
      * @param catelogs
@@ -129,6 +125,8 @@
         return tree;
     }
 
+    
+    
     /**
      * 找到当前节点的父级
      * @param currTreeItem
@@ -250,6 +248,11 @@
         return document.documentElement.scrollTop || document.body.scrollTop;
     }
 
+
+    const option = Object.assign({}, defaultOpts, opts);
+    const $content = this.contentEl = document.getElementById(option.contentEl);      // 内容元素
+    const $catelog = document.getElementById(option.catelogEl);     // 目录元素
+
     let allCatelogs = $content.querySelectorAll(option.selector.join());
 
     let tree = getCatelogsTree(allCatelogs);
@@ -352,4 +355,11 @@
 
     addEvent(window, 'scroll', resolveScroll);
 
+    // fix https://github.com/KELEN/k-catelog/issues/1
+    // 重新构建目录
+    this.rebuild = function() {
+        let allCatelogs = $content.querySelectorAll(option.selector.join());
+        let tree = getCatelogsTree(allCatelogs);
+        $catelog.innerHTML = generateHtmlTree(tree, {id: -1});
+    }
 });

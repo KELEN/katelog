@@ -305,7 +305,7 @@
 </body>
 <script type="text/javascript" src="./k-catelog.js"></script>
 <script type="text/javascript">
-    new Katelog({
+    let katelogIns = new Katelog({
         contentEl: 'k-catelog',
         catelogEl: 'catelog-list',
         linkClass: 'k-catelog-link',
@@ -315,5 +315,11 @@
         active: function (el) {
         }
     });
+
+    let html = '<h2>动态添加的标题</h2>'
+    katelogIns.contentEl.insertAdjacentHTML('afterBegin', html);
+    katelogIns.rebuild();
+
+
 </script>
 </html>
