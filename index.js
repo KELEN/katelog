@@ -250,8 +250,10 @@
 
 
     const option = Object.assign({}, defaultOpts, opts);
-    const $content = this.contentEl = document.getElementById(option.contentEl);      // 内容元素
-    const $catelog = document.getElementById(option.catelogEl);     // 目录元素
+    const $content = this.contentEl =
+        option.contentEl instanceof HTMLElement ? option.contentEl : document.getElementById(option.contentEl);      // 内容元素
+    const $catelog =
+        option.catelogEl instanceof HTMLElement ? option.catelogEl : document.getElementById(option.catelogEl);     // 目录元素
 
     let allCatelogs = $content.querySelectorAll(option.selector.join());
 
