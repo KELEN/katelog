@@ -16,7 +16,9 @@
     "url": "https://github.com/KELEN/katelog/issues"
   },
   "homepage": "https://github.com/KELEN/katelog#readme",
-  "dependencies": {},
+  "dependencies": {
+    "markdown": "^0.5.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",

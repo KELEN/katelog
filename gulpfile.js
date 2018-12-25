@@ -6,19 +6,19 @@ const rename = require('gulp-rename')
 
 
 gulp.task('compile', function (cb) {
-    pump([
-        gulp.src('./index.js'),
-        babel({  presets: ['env'] }),
-        uglify({
-            mangle: {
-                toplevel: true
-            }
-        }),
-        rename('katelog.min.js'),
-        gulp.dest('dist')
-    ], cb)
+  pump([
+    gulp.src('./index.js'),
+    babel({ presets: ['env'] }),
+    uglify({
+      mangle: {
+        toplevel: true
+      }
+    }),
+    rename('katelog.min.js'),
+    gulp.dest('dist')
+  ], cb)
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./index.js', ['compile'])
+  gulp.watch('./index.js', ['compile'])
 })
