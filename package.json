@@ -1,6 +1,6 @@
 {
   "name": "katelog",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a pure javascript tool to generate html catelog by head (h1, h2, h3, h4, h5, h6);",
   "main": "index.js",
   "repository": {

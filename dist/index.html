@@ -15,7 +15,7 @@
 
   .k-catelog-list {
     width: 300px;
-    height: 400px;
+    height: 500px;
     position: fixed;
     left: 20px;
     top: 100px;
@@ -71,7 +71,7 @@
   $.get('markdown.md').then(res => {
     $('#k-catelog').html(markdown.toHTML(res))
 
-    let katelogIns = new katelog({
+    const katelogIns = new katelog({
       contentEl: 'k-catelog',
       catelogEl: 'catelog-list',
       linkClass: 'k-catelog-link',
@@ -82,7 +82,7 @@
       }
     });
 
-    let html = '<h2>动态添加的标题</h2>'
+    const html = '<h2>动态添加的标题</h2>'
     katelogIns.contentEl.insertAdjacentHTML('afterBegin', html);
     katelogIns.rebuild();
   })
