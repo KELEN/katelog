@@ -302,9 +302,11 @@
 
         activeTarget = c;
 
-        c.scrollIntoView({
-          behavior: 'smooth'
-        })
+        const top = getElementTop(c, $catelog)
+        $catelog.scrollTop = top - $catelog.offsetHeight / 2
+        // c.scrollIntoView({
+        //   behavior: 'smooth'
+        // })
 
       } else {
         removeClass(c, option.linkActiveClass)
@@ -336,10 +338,16 @@
     clickToScroll = false;
   }
 
-
-  function getElementTop(el) {
+  /**
+   * 获取元素距离顶部的距离
+   * @param {*} el 
+   */
+  function getElementTop(el, by = null) {
     let top = el.offsetTop;
     while (el = el.offsetParent) {
+      if (by === el) {
+        break
+      }
       top += el.offsetTop;
     }
     return top;
