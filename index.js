@@ -276,12 +276,13 @@
   document.getElementsByTagName('head')[0].appendChild(styleNode);
 
   addEvent($catelog, 'click', function (e) {
-    let target = e.target || e.srcElement;
-    let id = target.getAttribute('data-target');
+    const target = e.target || e.srcElement;
+    const id = target.getAttribute('data-target');
     if (id) {
       let headEl = document.getElementById(id);
       clickToScroll = true;
-      window.scrollTo(0, headEl.offsetTop - option.supplyTop);
+      const scrollTop = getElementTop(headEl)
+      window.scrollTo(0, scrollTop - option.supplyTop);
       setActiveItem(id);
     }
   });

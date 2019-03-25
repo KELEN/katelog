@@ -11,7 +11,8 @@
     "catelog"
   ],
   "scripts": {
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+    "build": "gulp compile"
   },
   "author": "kelen",
   "license": "ISC",
