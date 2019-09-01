@@ -50,3 +50,5 @@ Temporary Items
 
 node_modules
 .idea/*
+
+package-lock.lock
